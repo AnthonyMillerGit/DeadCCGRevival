@@ -1,22 +1,23 @@
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Navbar from './components/Navbar/Navbar';
+import LandingPage from './pages/Landingpage/Landingpage.js';
+import GamesPage from './pages/Gamespage/Gamespage.js';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/games" element={<GamesPage />} />
+          {/* Add more routes as needed */}
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
