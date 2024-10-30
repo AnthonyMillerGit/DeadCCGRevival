@@ -1,13 +1,8 @@
 import React from 'react';
-import { GamePageContainer } from './Gamespage.styles';
 
-export function GamesPage() {
-  return (
-    <GamePageContainer>
-      <h1>Welcome to the Game Page</h1>
-      {/* Other content */}
-    </GamePageContainer>
-  );
-}
+const GamesPage = () => {
+  console.log('GamesPage component loaded');
+  return <div>Games Page</div>;
+};
 
 export default GamesPage;

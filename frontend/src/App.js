@@ -1,9 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
-import LandingPage from './pages/Landingpage/Landingpage.js';
-import GamesPage from './pages/Gamespage/Gamespage.js';
 import Footer from './components/Footer/Footer';
+import LandingPage from './pages/Landingpage/Landingpage';
+import GamesPage from './pages/Gamespage/Gamespage';
+
+console.log('App component loaded');
 
 function App() {
   return (
