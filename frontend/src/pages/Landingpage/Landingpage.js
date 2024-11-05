@@ -1,6 +1,8 @@
+// src/components/LandingPage.js
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { fetchPosts } from '../../services/api';
-import { LandingPageContainer, PostCard, PostTitle, PostContent } from './Landingpage.styles';
+import { LandingPageContainer, PostCard, PostTitle, PostContent, ReadMoreButton } from './Landingpage.styles';
 
 const LandingPage = () => {
   const [posts, setPosts] = useState([]);
@@ -22,8 +24,11 @@ const LandingPage = () => {
           <PostCard key={post.id}>
             <PostTitle>{post.Title || 'Untitled'}</PostTitle>
             <PostContent>
-              {post.Content[0]?.children?.[0]?.text || 'No content available.'}
+              {post.Content[0]?.children?.[0]?.text.slice(0, 200) || 'No content available.'}...
             </PostContent>
+            <Link to={`/posts/${post.id}`}>
+              <ReadMoreButton>Read Full Article</ReadMoreButton>
+            </Link>
           </PostCard>
         ))
       ) : (

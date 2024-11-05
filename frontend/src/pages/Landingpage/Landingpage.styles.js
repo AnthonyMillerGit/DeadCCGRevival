@@ -34,3 +34,17 @@ export const PostContent = styled.p`
   color: #EAEAEA; /* Light Gray for content */
   line-height: 1.6;
 `;
+
+export const ReadMoreButton = styled.button`
+  background-color: #08D9D6;
+  color: #EAEAEA;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #FF2E63;
+  }
+`;
