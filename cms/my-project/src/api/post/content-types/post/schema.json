@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "posts",
+  "info": {
+    "singularName": "post",
+    "pluralName": "posts",
+    "displayName": "Posts"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Content": {
+      "type": "blocks"
+    },
+    "Type": {
+      "type": "enumeration",
+      "enum": [
+        "Deck Tech",
+        "Card Review",
+        "Revival",
+        "News",
+        "Learning"
+      ]
+    },
+    "Game": {
+      "type": "enumeration",
+      "enum": [
+        "SeventhSea",
+        "StarTrek1E",
+        "HarryPotter"
+      ]
+    },
+    "Tags": {
+      "type": "json"
+    },
+    "Media": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "Date": {
+      "type": "datetime"
+    }
+  }
+}
